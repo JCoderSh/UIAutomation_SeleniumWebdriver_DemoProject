@@ -27,9 +27,8 @@ public class SeleniumDemo {
         // Navigate to url
         driver.get(baseURL);
         System.out.println(driver.getTitle());
-        driver.findElement(By.id("email")).sendKeys("Jyoti_Shinde2004@yahoo.com");
-        driver.findElement(By.xpath("//*[@id='pass']")).sendKeys("Aditi12#f");
-        driver.findElement(By.xpath("//*[@type='submit']//parent::div/button")).click();
+        List<WebElement> b= driver.findElements(By.tagName("a"))
+        System.out.println(b);
         driver.getTitle();
         // Accept the pop up for notification
         ChromeOptions options = new ChromeOptions();
@@ -40,11 +39,7 @@ public class SeleniumDemo {
     }
 }
 
-
-
-
-
-  /* System.setProperty("Webdriver.chrome.driver", "C:\\chromedriver.exe");
+/* System.setProperty("Webdriver.chrome.driver", "C:\\chromedriver.exe");
            WebDriver driver = new ChromeDriver();
            Jyoti.get("https://www.google.com");1
 
